@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "../../dist/client",
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@/**/*": [
+        "../client/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "../client/**/*.ts",
+    "../client/**/*.tsx",
+    "../client/**/*.vue"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../dist",
+    "../client/**/*.spec.ts",
+    "../server/**/*"
+  ]
+}
