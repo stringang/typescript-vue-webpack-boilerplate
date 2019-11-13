@@ -1,4 +1,5 @@
 const path = require('path');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 const env = process.env.NODE_ENV || 'development';
 const isDev = env === 'development';

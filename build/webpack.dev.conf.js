@@ -4,6 +4,7 @@ const merge = require('webpack-merge');
 const commonConfig = require('./webpack.base.conf');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
