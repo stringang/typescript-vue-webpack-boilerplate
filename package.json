@@ -1,13 +1,13 @@
 {
-  "name": "ts-test",
+  "name": "typestcript-vue-webpack-boilerplate",
   "version": "0.1.0",
-  "private": true,
+  "title": "TypeScript-Vue-Webpack BoilerPlate",
+  "description": "NodeJS Web application server boilerplate with TypeScript and VueJS",
   "scripts": {
-    "start": "ts-node build/devServer.ts"
+    "dev": "ts-node build/devServer.ts"
   },
   "dependencies": {
-    "core-js": "^3.3.2",
-    "vue": "^2.6.10"
+    "core-js": "^3.3.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
@@ -26,6 +26,7 @@
     "typescript": "^3.7.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.2.0",
+    "vue": "^2.6.10",
     "vue-loader": "^15.7.2",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.41.2",

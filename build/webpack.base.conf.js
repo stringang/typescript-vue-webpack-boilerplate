@@ -6,11 +6,7 @@ const isDev = env === 'development';
 function resolve(dir) {
   return path.join(__dirname, '..', dir);
 }
-/**
- * https://github.com/microsoft/TypeScript-Vue-Starter
- * https://github.com/samteb/vue-2-webpack-4-boilerplate
- * https://github.com/vuejs-templates/webpack
- */
+
 module.exports = {
   entry: {
     app: resolve('src/client/main.ts')

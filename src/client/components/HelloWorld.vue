@@ -13,7 +13,7 @@
       return {
         msg: 'fullStack-TypeScript-Vue-Webpack'
       };
-    },
+    }
   });
 </script>
 
