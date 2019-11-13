@@ -2,22 +2,24 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const commonConfig = require('./webpack.base.conf');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
+}
 
 module.exports = merge(commonConfig, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
+  entry: {
+    app: [resolve('./src/client/main.ts'), 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000']
+  },
   output: {
     publicPath: '/dist/client',
     path: path.resolve(__dirname, '../dist/client'),
     filename: '[name].[hash].js',
     chunkFilename: '[id].[hash].js',
-    hotUpdateChunkFilename: '../hot/hot-update.js',
-    hotUpdateMainFilename: '../hot/hot-update.json'
-    // publicPath: '/',
   },
   optimization: {
     moduleIds: 'hashed',
@@ -34,25 +36,6 @@ module.exports = merge(commonConfig, {
       inject: true,
     }),
     new webpack.HotModuleReplacementPlugin(),
-    // 启动输出清理
-    new FriendlyErrorsWebpackPlugin({
-      compilationSuccessInfo: {
-        notes: ['Some additional notes to be displayed upon successful compilation'],
-        clearConsole: true
-      },
-    })
+    new webpack.NoEmitOnErrorsPlugin()
   ],
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist/client'),
-    quiet: true,
-    compress: true,
-    port: 3000,
-    host: 'localhost',
-    https: false,
-    hot: true,
-    watchContentBase: true,
-    open: true,
-    overlay: true,
-    openPage: '../dist/client/index.html'
-  }
 });

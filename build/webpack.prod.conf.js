@@ -9,6 +9,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(commonConfig, {
   mode: 'production',
   devtool: 'source-map',
+  entry: {
+    app: resolve('../src/client/main.ts')
+  },
   output: {
     path: path.resolve(__dirname, '../dist/client'),
     filename: '[name].bundle.js',
@@ -51,7 +54,7 @@ module.exports = merge(commonConfig, {
       inject: true,
       chunksSortMode: 'dependency',
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJSPlugin({
       sourceMap: true,
       compress: {
         warnings: false

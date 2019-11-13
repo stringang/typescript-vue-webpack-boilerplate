@@ -17,7 +17,7 @@ $ npm run dev
 **Server-side**
 
 * [x] NodeJS
-* [ ] Koa2/NestJS
+* [x] Koa2/NestJS/express
 
 **Client-side**
 * [x] VueJS 2.X

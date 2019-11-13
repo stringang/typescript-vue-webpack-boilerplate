@@ -1,8 +1,7 @@
 import http from 'http';
+import Koa from 'koa';
 
-const server = http.createServer((req, res) => {
-  res.write('success');
-  res.end();
-});
+const app = new Koa();
+const server = http.createServer(app.callback());
 
 server.listen(3000);

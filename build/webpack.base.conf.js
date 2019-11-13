@@ -8,9 +8,6 @@ function resolve(dir) {
 }
 
 module.exports = {
-  entry: {
-    app: resolve('src/client/main.ts')
-  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.vue'],
     alias: {
