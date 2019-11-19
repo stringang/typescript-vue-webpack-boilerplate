@@ -16,9 +16,7 @@
       "node"
     ],
     "paths": {
-      "@/**/*": [
-        "../client/*"
-      ]
+     
     },
     "lib": [
       "esnext",

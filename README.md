@@ -28,15 +28,15 @@ $ npm run dev
 ## Directory structure
 ```txt
 +---build
-|       devServer.ts
-|       wepback.base.conf.js
-|       webpack.dev.conf.js
-|       webpack.prod.conf.js
+|-------devServer.ts
+|-------wepback.base.conf.js
+|-------webpack.dev.conf.js
+|-------webpack.prod.conf.js
 +---src
 |   +---client
-|   |       index.html
-|   |       main.ts
-|   |       tsconfig.json
+|   |-------index.html
+|   |-------main.ts
+|   |-------tsconfig.json
 |   |   +---componets
 |   |           HelloWorld.Vue
 |   |   +---router
