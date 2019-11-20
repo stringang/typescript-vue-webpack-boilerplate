@@ -13,6 +13,12 @@ For development
 $ npm run dev
 ```
 
+For production
+
+```shell
+$ npm run prod
+```
+
 ## Features
 **Server-side**
 
@@ -22,6 +28,7 @@ $ npm run dev
 **Client-side**
 * [x] VueJS 2.X
 * [x] Vue-router
+* [x] Vuex
 * [x] Webpack 4
 * [x] Babel
 
