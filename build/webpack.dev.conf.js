@@ -16,7 +16,7 @@ module.exports = merge(commonConfig, {
     app: [resolve('./src/client/main.ts'), 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000']
   },
   output: {
-    publicPath: '/dist/client',
+    publicPath: '/', // webpack inject index.html js file relative path
     path: path.resolve(__dirname, '../dist/client'),
     filename: '[name].[hash].js',
     chunkFilename: '[id].[hash].js',

@@ -1,7 +1,9 @@
-import http from 'http';
-import Koa from 'koa';
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app.module';
 
-const app = new Koa();
-const server = http.createServer(app.callback());
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  await app.listen(3000);
+}
 
-server.listen(3000);
+bootstrap();

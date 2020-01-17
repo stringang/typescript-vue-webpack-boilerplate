@@ -1,19 +1,22 @@
 {
-  "name": "typestcript-vue-webpack-boilerplate",
+  "name": "typescript-vue-webpack-boilerplate",
   "version": "0.1.0",
   "title": "TypeScript-Vue-Webpack BoilerPlate",
   "description": "NodeJS Web application server boilerplate with TypeScript and VueJS",
   "scripts": {
     "dev": "ts-node build/devServer.ts",
-    "prod": "gulp"
+    "prod": "cross-env NODE_ENV=production gulp"
   },
   "dependencies": {
+    "@nestjs/common": "^6.10.14",
+    "@nestjs/core": "^6.10.14",
+    "@nestjs/platform-express": "^6.10.14",
+    "@nestjs/serve-static": "^1.0.2",
     "core-js": "^3.3.2",
-    "koa": "^2.11.0",
-    "koa-static": "^5.0.0"
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
-    "@types/koa-static": "^4.0.1",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-service": "^4.0.0",
@@ -21,6 +24,7 @@
     "@vue/eslint-config-typescript": "^4.0.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-eslint": "^10.0.3",
+    "cross-env": "^6.0.3",
     "eslint": "^5.16.0",
     "eslint-loader": "^3.0.2",
     "eslint-plugin-vue": "^5.2.3",

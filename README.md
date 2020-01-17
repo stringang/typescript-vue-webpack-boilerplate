@@ -23,7 +23,7 @@ $ npm run prod
 **Server-side**
 
 * [x] NodeJS
-* [x] Koa2/NestJS/express
+* [x] NestJS
 
 **Client-side**
 * [x] VueJS 2.X
@@ -49,6 +49,8 @@ $ npm run prod
 |   |   +---router
 |   |           index.ts              
 |   +---server
+|   |        app.module.ts
+|   |        app.controller.ts
 |   |        main.ts
 |   |   +---services
 |   |   +---utils

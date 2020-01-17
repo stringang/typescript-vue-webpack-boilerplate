@@ -13,6 +13,7 @@ module.exports = merge(commonConfig, {
     app: resolve('../src/client/main.ts')
   },
   output: {
+    publicPath: '/',
     path: path.resolve(__dirname, '../dist/client'),
     filename: '[name].bundle.js',
     chunkFilename: '[id].[hash].chunk.js',
