@@ -14,7 +14,7 @@ const compiler = webpack(webpackConfig);
 async function bootstrap () {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-// https://github.com/webpack/webpack-dev-middleware
+  // https://github.com/webpack/webpack-dev-middleware
   app.use(webpackDevMiddleware(compiler, {
     logLevel: 'warn', publicPath: webpackConfig.output.publicPath
   }));
