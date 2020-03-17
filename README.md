@@ -24,6 +24,7 @@ $ npm run prod
 
 * [x] NodeJS
 * [x] NestJS
+* [x] logging/tracing/metric
 
 **Client-side**
 * [x] VueJS 2.X
@@ -34,29 +35,48 @@ $ npm run prod
 
 ## Directory structure
 ```txt
-+---build
-|-------devServer.ts
-|-------wepback.base.conf.js
-|-------webpack.dev.conf.js
-|-------webpack.prod.conf.js
-+---src
-|   +---client
-|   |-------index.html
-|   |-------main.ts
-|   |-------tsconfig.json
-|   |   +---componets
-|   |           HelloWorld.Vue
-|   |   +---router
-|   |           index.ts              
-|   +---server
-|   |        app.module.ts
-|   |        app.controller.ts
-|   |        main.ts
-|   |   +---services
-|   |   +---utils
-|
-|   package.json
-|   tsconfig.json
+.
+|-- build               # frontend build configuration
+|   |-- devServer.ts
+|   |-- webpack.base.conf.js
+|   |-- webpack.dev.conf.js
+|   `-- webpack.prod.conf.js
+|-- src
+|   |-- client          # froned code
+|   |   |-- components
+|   |   |   |-- HelloWorld.vue
+|   |   |-- router
+|   |   |   `-- index.ts
+|   |   |-- store
+|   |   |   `-- index.ts
+|   |   |-- App.vue
+|   |   |-- index.html
+|   |   |-- main.ts
+|   |   |-- shims-tsx.d.ts
+|   |   |-- shims-vue.d.ts
+|   |   `-- tsconfig.json
+|   `-- server          # server code
+|       |-- example
+|       |   |-- example.controller.ts
+|       |   |-- example.module.ts
+|       |   `-- example.service.ts
+|       |-- framework
+|       |   |-- logging
+|       |   |-- metric
+|       |   |   `-- metric.module.ts
+|       |   `-- tracing
+|       |-- app.controller.ts
+|       |-- app.module.ts
+|       `-- main.ts         # application entry
+|-- Dockerfile
+|-- Gulpfile.js
+|-- README.md
+|-- babel.config.js
+|-- package-lock.json
+|-- package.json
+|-- tsconfig.json
+|-- tslint.json
+`-- webpack.config.js
 ```
 
 ## Reference

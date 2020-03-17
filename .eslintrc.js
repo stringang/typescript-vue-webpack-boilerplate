@@ -15,7 +15,8 @@ module.exports = {
     'object-curly-spacing': 'error',
     'array-bracket-spacing': 'off',
     'semi': 'off',
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'comma-dangle': ['off', 'always']
   },
   parserOptions: {
     parser: '@typescript-eslint/parser'
