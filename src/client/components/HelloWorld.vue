@@ -6,15 +6,9 @@
 
 <script lang="ts">
   import Vue from 'vue';
+  import HelloWorld from './HelloWrold';
 
-  export default Vue.extend({
-    name: 'HelloWorld',
-    data() {
-      return {
-        msg: 'fullStack-TypeScript-Vue-Webpack'
-      };
-    }
-  });
+  export default Vue.extend(HelloWorld);
 </script>
 
 <style scoped>

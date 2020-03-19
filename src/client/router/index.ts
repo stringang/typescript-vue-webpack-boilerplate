@@ -1,6 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld.vue';
+
+/**
+ * lazy loading route and code splitting
+ * https://webpack.js.org/guides/code-splitting/
+ * https://router.vuejs.org/guide/advanced/lazy-loading.html
+ */
+const HelloWorld = () => import(/* webpackChunkName: "helloworld" */ '@/components/HelloWorld.vue');
 
 Vue.use(Router);
 

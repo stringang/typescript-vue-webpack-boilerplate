@@ -18,8 +18,8 @@ module.exports = merge(commonConfig, {
   output: {
     publicPath: '/', // webpack inject index.html js file relative path
     path: path.resolve(__dirname, '../dist/client'),
-    filename: '[name].[hash].js',
-    chunkFilename: '[id].[hash].js',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
   },
   optimization: {
     moduleIds: 'hashed',

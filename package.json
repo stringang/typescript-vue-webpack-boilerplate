@@ -6,6 +6,7 @@
   "scripts": {
     "prebuild": "prettier --write \"src/**/*.ts\"",
     "build": "tsc",
+    "build:client": "gulp client",
     "format": "prettier --write \"src/**/*.ts\"",
     "dev:client": "ts-node build/devServer.ts",
     "dev:server": "ts-node src/server/main.ts",

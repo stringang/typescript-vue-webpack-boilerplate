@@ -45,6 +45,7 @@ $ npm run prod
 |   |-- client          # froned code
 |   |   |-- components
 |   |   |   |-- HelloWorld.vue
+|   |   |   `-- HelloWorld.ts
 |   |   |-- router
 |   |   |   `-- index.ts
 |   |   |-- store
@@ -70,6 +71,7 @@ $ npm run prod
 |       `-- main.ts         # application entry
 |-- Dockerfile
 |-- Gulpfile.js
+|-- Jenkinsfile.js
 |-- README.md
 |-- babel.config.js
 |-- package-lock.json
