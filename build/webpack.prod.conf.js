@@ -1,22 +1,26 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const commonConfig = require('./webpack.config.common');
+const commonConfig = require('./webpack.base.conf');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+function resolve(dir) {
+  return path.join(__dirname, '..', dir);
+}
+
 module.exports = merge(commonConfig, {
   mode: 'production',
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   entry: {
-    app: resolve('../src/client/main.ts')
+    app: resolve('./src/client/main.ts'),
   },
   output: {
     publicPath: '/',
     path: path.resolve(__dirname, '../dist/client'),
     filename: '[name].bundle.js',
-    chunkFilename: '[id].[hash].chunk.js',
+    chunkFilename: '[name].[hash].chunk.js',
   },
   optimization: {
     runtimeChunk: 'single',
@@ -57,12 +61,12 @@ module.exports = merge(commonConfig, {
     }),
     new UglifyJSPlugin({
       sourceMap: true,
-      compress: {
-        warnings: false
-      }
+      uglifyOptions: {
+        warnings: false,
+      },
     }),
     new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
+      minimize: true,
+    }),
   ],
 });

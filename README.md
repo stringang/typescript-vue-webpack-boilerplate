@@ -10,7 +10,8 @@ $ npm install
 For development
 
 ```shell
-$ npm run dev
+$ npm run dev:client
+$ npm run dev:server
 ```
 
 For production

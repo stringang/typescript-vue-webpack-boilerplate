@@ -7,10 +7,10 @@
     "prebuild": "prettier --write \"src/**/*.ts\"",
     "build": "tsc",
     "build:client": "gulp client",
-    "format": "prettier --write \"src/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"build/*.js\" \"build/*.ts\"",
     "dev:client": "ts-node build/devServer.ts",
     "dev:server": "ts-node src/server/main.ts",
-    "prod": "cross-env NODE_ENV=production gulp"
+    "prod": "cross-env NODE_ENV=production gulp && node dist/server/main"
   },
   "dependencies": {
     "@nestjs/common": "^6.11.11",

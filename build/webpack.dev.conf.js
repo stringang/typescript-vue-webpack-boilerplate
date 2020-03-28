@@ -13,7 +13,10 @@ module.exports = merge(commonConfig, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   entry: {
-    app: [resolve('./src/client/main.ts'), 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000']
+    app: [
+      resolve('./src/client/main.ts'),
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    ],
   },
   output: {
     publicPath: '/', // webpack inject index.html js file relative path
@@ -37,6 +40,6 @@ module.exports = merge(commonConfig, {
       inject: true,
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 });
