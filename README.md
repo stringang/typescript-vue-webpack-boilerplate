@@ -37,11 +37,11 @@ $ npm run prod
 ## Directory structure
 ```txt
 .
-|-- build               # frontend build configuration
+|-- config               # frontend build configuration
 |   |-- devServer.ts
-|   |-- webpack.base.conf.js
-|   |-- webpack.dev.conf.js
-|   `-- webpack.prod.conf.js
+|   |-- webpack.config.common.js
+|   |-- webpack.config.dev.js
+|   `-- webpack.config.prod.js
 |-- src
 |   |-- client          # froned code
 |   |   |-- components
