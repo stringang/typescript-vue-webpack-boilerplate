@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  typescripe-vue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: typescripe/vue
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+    container_name: typescripe-vue-instance
+    restart: always
