@@ -1,0 +1,14 @@
+{
+  "watch": [
+    "src/server"
+  ],
+  "ext": "ts,yaml",
+  "ignore": [
+    "src/client/",
+    "node_modules",
+    ".git",
+    ".vscode",
+    ".idea"
+  ],
+  "exec": "ts-node -r tsconfig-paths/register src/server/main.ts"
+}
