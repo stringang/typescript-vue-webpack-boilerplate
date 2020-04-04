@@ -1,0 +1,3 @@
+* text=auto eol=lf
+package-lock.json   -diff -merge
+package-lock.json    linguist-generated=true
