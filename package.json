@@ -16,7 +16,7 @@
     "@nestjs/common": "7.0.7",
     "@nestjs/core": "7.0.7",
     "@nestjs/platform-express": "7.0.7",
-    "@nestjs/serve-static": "1.0.2",
+    "@nestjs/serve-static": "2.1.0",
     "core-js": "3.6.4",
     "jaeger-client": "3.17.2",
     "prom-client": "12.0.0",
