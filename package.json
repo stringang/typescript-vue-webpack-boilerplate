@@ -41,7 +41,7 @@
     "gulp": "4.0.2",
     "gulp-typescript": "6.0.0-alpha.1",
     "html-webpack-plugin": "4.0.4",
-    "husky": "4.2.3",
+    "husky": "4.2.5",
     "koa-webpack-dev-middleware": "2.0.2",
     "koa-webpack-hot-middleware": "1.0.3",
     "lint-staged": "10.1.2",
