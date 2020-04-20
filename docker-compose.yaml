@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  typescripe-vue:
+  typescripe-vue-instance:
     build:
       context: .
       dockerfile: Dockerfile

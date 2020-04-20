@@ -87,3 +87,4 @@ $ npm run prod
 - https://github.com/samteb/vue-2-webpack-4-boilerplate
 - https://github.com/vuejs-templates/webpack
 - https://github.com/icebob/vue-express-mongo-boilerplate
+- [Set data Type in Vue data object with Typescript](https://stackoverflow.com/q/47810218/5204695)
