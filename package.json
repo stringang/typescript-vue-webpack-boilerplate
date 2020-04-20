@@ -70,7 +70,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run build -- --noEmit"
+      "pre-push": "npm run build -- --noEmit",
+      "commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
