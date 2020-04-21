@@ -46,7 +46,7 @@
     "koa-webpack-hot-middleware": "1.0.3",
     "lint-staged": "10.1.7",
     "nodemon": "2.0.2",
-    "prettier": "2.0.4",
+    "prettier": "2.0.5",
     "rimraf": "3.0.2",
     "style-loader": "1.1.4",
     "ts-loader": "7.0.1",
