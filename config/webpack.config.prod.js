@@ -57,7 +57,6 @@ module.exports = merge(commonConfig, {
       template: path.resolve(__dirname, '../src/client', 'index.html'),
       filename: 'index.html',
       inject: true,
-      chunksSortMode: 'dependency',
     }),
     new UglifyJSPlugin({
       sourceMap: true,
@@ -67,6 +66,11 @@ module.exports = merge(commonConfig, {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
     }),
   ],
 });
