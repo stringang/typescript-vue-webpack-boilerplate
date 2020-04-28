@@ -18,7 +18,7 @@
     "@nestjs/platform-express": "7.0.7",
     "@nestjs/serve-static": "2.1.0",
     "core-js": "3.6.4",
-    "jaeger-client": "3.17.2",
+    "jaeger-client": "3.18.0",
     "prom-client": "12.0.0",
     "reflect-metadata": "0.1.13",
     "rxjs": "6.5.4"
